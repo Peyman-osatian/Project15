@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zwk-UQ-Wrv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="y4j-sw-nfe">
+            <objects>
+                <navigationController id="Zwk-UQ-Wrv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Apz-Pn-JDh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.28627450980000002" green="0.61568627450000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.28627450980000002" green="0.61568627450000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SFk-3B-vfb" kind="relationship" relationship="rootViewController" id="uwM-3o-nl0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEe-wM-A7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="57"/>
+        </scene>
+        <!--City Selector View Controller-->
+        <scene sceneID="xOj-Pn-LpZ">
+            <objects>
+                <viewController id="SFk-3B-vfb" customClass="CitySelectorViewController" customModule="Project15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GVJ-wc-DLS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kenrick-mills-1h2Pg97SXfA-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="9NV-v3-M18">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="w5U-bl-Jal">
+                                <rect key="frame" x="303" y="123" width="64" height="64"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1d-yP-dkC">
+                                <rect key="frame" x="116.5" y="709" width="181" height="44"/>
+                                <color key="backgroundColor" red="0.28627450980000002" green="0.61568627450000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Enter Your City">
+                                    <color key="titleColor" red="0.0" green="0.20000000000000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hCt-gV-p9U" kind="show" identifier="openCity" id="o92-pR-1DI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUw-Sf-cm3">
+                                <rect key="frame" x="155" y="208" width="104" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="34"/>
+                                <state key="normal" title="Details">
+                                    <color key="titleColor" red="0.0" green="0.20000000000000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showDetails:" destination="SFk-3B-vfb" eventType="touchUpInside" id="cRB-sA-Yo0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jönköping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-sx-4e0">
+                                <rect key="frame" x="34" y="132" width="138" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d1d-N2-1wy"/>
+                        <color key="backgroundColor" red="0.28627450980000002" green="0.61568627450000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9NV-v3-M18" firstAttribute="top" secondItem="d1d-N2-1wy" secondAttribute="top" id="3c1-tJ-EuU"/>
+                            <constraint firstItem="d1d-N2-1wy" firstAttribute="trailing" secondItem="w5U-bl-Jal" secondAttribute="trailing" constant="47" id="5Kj-KC-Tgm"/>
+                            <constraint firstItem="HUw-Sf-cm3" firstAttribute="top" secondItem="d1d-N2-1wy" secondAttribute="top" constant="120" id="8NA-FL-kWV"/>
+                            <constraint firstItem="S1d-yP-dkC" firstAttribute="centerX" secondItem="GVJ-wc-DLS" secondAttribute="centerX" id="H2y-fD-Fig"/>
+                            <constraint firstItem="XRy-sx-4e0" firstAttribute="leading" secondItem="d1d-N2-1wy" secondAttribute="leading" constant="34" id="Hjo-kp-0QV"/>
+                            <constraint firstItem="XRy-sx-4e0" firstAttribute="top" secondItem="d1d-N2-1wy" secondAttribute="top" constant="44" id="IVJ-hC-9au"/>
+                            <constraint firstItem="HUw-Sf-cm3" firstAttribute="centerX" secondItem="GVJ-wc-DLS" secondAttribute="centerX" id="IZg-oX-2xg"/>
+                            <constraint firstAttribute="trailing" secondItem="9NV-v3-M18" secondAttribute="trailing" id="LIk-sY-uIj"/>
+                            <constraint firstItem="d1d-N2-1wy" firstAttribute="bottom" secondItem="S1d-yP-dkC" secondAttribute="bottom" constant="109" id="OTR-ZO-FqH"/>
+                            <constraint firstItem="w5U-bl-Jal" firstAttribute="top" secondItem="d1d-N2-1wy" secondAttribute="top" constant="35" id="Rgs-7Y-3bu"/>
+                            <constraint firstItem="9NV-v3-M18" firstAttribute="leading" secondItem="d1d-N2-1wy" secondAttribute="leading" id="V7q-Qp-6ek"/>
+                            <constraint firstAttribute="bottom" secondItem="9NV-v3-M18" secondAttribute="bottom" id="VRC-og-Qcz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wgG-tp-Uhl"/>
+                    <connections>
+                        <outlet property="city" destination="XRy-sx-4e0" id="qNk-x0-dAY"/>
+                        <outlet property="details" destination="HUw-Sf-cm3" id="NEx-tU-crH"/>
+                        <outlet property="image" destination="w5U-bl-Jal" id="xLm-eP-aVc"/>
+                        <segue destination="S9k-h4-O4d" kind="show" identifier="openWeather" id="DZT-Ms-hpD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMD-yn-CBi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2111.594202898551" y="39.508928571428569"/>
+        </scene>
+        <!--City View Controller-->
+        <scene sceneID="ukk-O3-rYx">
+            <objects>
+                <viewController id="hCt-gV-p9U" customClass="CityViewController" customModule="Project15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jQO-Gz-CJk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kenrick-mills-1h2Pg97SXfA-unsplash" translatesAutoresizingMaskIntoConstraints="NO" id="Z3k-Va-CrR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Where Are You Looking for?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7P-xf-jo7">
+                                <rect key="frame" x="102" y="264" width="210" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Epg-nj-UJV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your City " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5v-h9-Y7F">
+                                <rect key="frame" x="92.5" y="182" width="229" height="39"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8h-UN-wNv">
+                                <rect key="frame" x="114" y="733" width="186" height="39"/>
+                                <color key="backgroundColor" red="0.28627450980000002" green="0.61568627450000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="0.0" green="0.20000000000000001" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="search:" destination="hCt-gV-p9U" eventType="touchUpInside" id="XUH-hM-Tlf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="85x-qO-ATs"/>
+                        <color key="backgroundColor" red="0.28627450980000002" green="0.61568627450000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="a7P-xf-jo7" firstAttribute="top" secondItem="k5v-h9-Y7F" secondAttribute="bottom" constant="43" id="1SB-oy-aw8"/>
+                            <constraint firstItem="k5v-h9-Y7F" firstAttribute="centerX" secondItem="jQO-Gz-CJk" secondAttribute="centerX" id="I95-xb-cPC"/>
+                            <constraint firstAttribute="bottom" secondItem="Z3k-Va-CrR" secondAttribute="bottom" id="OUN-cc-eDe"/>
+                            <constraint firstItem="85x-qO-ATs" firstAttribute="bottom" secondItem="C8h-UN-wNv" secondAttribute="bottom" constant="90" id="Pxx-JC-nSh"/>
+                            <constraint firstItem="C8h-UN-wNv" firstAttribute="leading" secondItem="85x-qO-ATs" secondAttribute="leading" constant="114" id="Wgv-TV-J2i"/>
+                            <constraint firstItem="85x-qO-ATs" firstAttribute="trailing" secondItem="Z3k-Va-CrR" secondAttribute="trailing" id="mS4-Jp-6X1"/>
+                            <constraint firstItem="Z3k-Va-CrR" firstAttribute="leading" secondItem="85x-qO-ATs" secondAttribute="leading" id="nQC-cJ-SZy"/>
+                            <constraint firstItem="k5v-h9-Y7F" firstAttribute="top" secondItem="85x-qO-ATs" secondAttribute="top" constant="94" id="ncA-KN-Okl"/>
+                            <constraint firstItem="a7P-xf-jo7" firstAttribute="centerX" secondItem="jQO-Gz-CJk" secondAttribute="centerX" id="uAm-8g-hLz"/>
+                            <constraint firstItem="Z3k-Va-CrR" firstAttribute="top" secondItem="85x-qO-ATs" secondAttribute="top" id="xAX-Tz-ETu"/>
+                            <constraint firstItem="C8h-UN-wNv" firstAttribute="centerX" secondItem="jQO-Gz-CJk" secondAttribute="centerX" id="yKl-kC-0o4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7MI-vF-h0x"/>
+                    <connections>
+                        <outlet property="city" destination="k5v-h9-Y7F" id="k1P-nM-nlV"/>
+                        <outlet property="cityTxt" destination="a7P-xf-jo7" id="Vhy-YW-qSY"/>
+                        <outlet property="search" destination="C8h-UN-wNv" id="qSi-2Z-c72"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ffb-Mc-RkO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2998.5507246376815" y="457.36607142857139"/>
+        </scene>
+        <!--WEATHER-->
+        <scene sceneID="7Tj-Q0-6IP">
+            <objects>
+                <viewController id="S9k-h4-O4d" customClass="WeatherConditionViewController" customModule="Project15" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mF5-7c-yfo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rainyBg" translatesAutoresizingMaskIntoConstraints="NO" id="R7i-X9-BhD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jönköping" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TP4-H6-H5x">
+                                <rect key="frame" x="43" y="138" width="167" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rain" translatesAutoresizingMaskIntoConstraints="NO" id="tMO-yY-ont">
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1ru-Kh-sky"/>
+                                    <constraint firstAttribute="width" secondItem="tMO-yY-ont" secondAttribute="height" multiplier="1:1" id="8Km-La-9Ey"/>
+                                    <constraint firstAttribute="height" constant="150" id="kG0-YU-fuJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THURSDAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rI3-RO-r8p">
+                                <rect key="frame" x="114" y="749" width="186" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 º" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbP-Fl-1Ek">
+                                <rect key="frame" x="292" y="138" width="87" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iTV-lM-OUd"/>
+                        <color key="backgroundColor" red="0.28627450980000002" green="0.61568627450000002" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tMO-yY-ont" firstAttribute="centerY" secondItem="mF5-7c-yfo" secondAttribute="centerY" id="0ip-tc-0bT"/>
+                            <constraint firstItem="rI3-RO-r8p" firstAttribute="centerX" secondItem="mF5-7c-yfo" secondAttribute="centerX" id="3uT-GN-Hod"/>
+                            <constraint firstItem="iTV-lM-OUd" firstAttribute="trailing" secondItem="UbP-Fl-1Ek" secondAttribute="trailing" constant="35" id="4bl-0p-58F"/>
+                            <constraint firstItem="UbP-Fl-1Ek" firstAttribute="top" secondItem="iTV-lM-OUd" secondAttribute="top" constant="50" id="DQe-Kz-hoz"/>
+                            <constraint firstAttribute="trailing" secondItem="R7i-X9-BhD" secondAttribute="trailing" id="SQO-2x-efw"/>
+                            <constraint firstItem="TP4-H6-H5x" firstAttribute="leading" secondItem="iTV-lM-OUd" secondAttribute="leading" constant="43" id="b4W-WR-ghg"/>
+                            <constraint firstItem="iTV-lM-OUd" firstAttribute="bottom" secondItem="R7i-X9-BhD" secondAttribute="bottom" id="jgT-qt-Bha"/>
+                            <constraint firstItem="TP4-H6-H5x" firstAttribute="top" secondItem="iTV-lM-OUd" secondAttribute="top" constant="50" id="llC-da-IWF"/>
+                            <constraint firstItem="tMO-yY-ont" firstAttribute="centerX" secondItem="mF5-7c-yfo" secondAttribute="centerX" id="oDp-A0-l0X"/>
+                            <constraint firstItem="iTV-lM-OUd" firstAttribute="bottom" secondItem="rI3-RO-r8p" secondAttribute="bottom" constant="70" id="oxg-EM-2ZA"/>
+                            <constraint firstItem="R7i-X9-BhD" firstAttribute="leading" secondItem="mF5-7c-yfo" secondAttribute="leading" id="p6X-kW-6In"/>
+                            <constraint firstItem="R7i-X9-BhD" firstAttribute="top" secondItem="iTV-lM-OUd" secondAttribute="top" id="zO1-3T-AlS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="WEATHER" id="igp-Fl-Gk2"/>
+                    <connections>
+                        <outlet property="background" destination="R7i-X9-BhD" id="y2j-B9-q4a"/>
+                        <outlet property="city" destination="TP4-H6-H5x" id="pB5-O8-IRp"/>
+                        <outlet property="day" destination="rI3-RO-r8p" id="pKx-UR-f2S"/>
+                        <outlet property="image" destination="tMO-yY-ont" id="ZCG-TT-fW8"/>
+                        <outlet property="temp" destination="UbP-Fl-1Ek" id="2Pc-IF-LtU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cZ4-3x-qeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2854" y="-613"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kenrick-mills-1h2Pg97SXfA-unsplash" width="1920" height="2880"/>
+        <image name="rain" width="512" height="512"/>
+        <image name="rainyBg" width="680" height="679.5"/>
+        <image name="sun" width="64" height="64"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
